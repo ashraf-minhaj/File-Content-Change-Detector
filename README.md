@@ -1,11 +1,11 @@
 # File Content Change Detector
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
 
-Contents:
-[Why?](#why-)
-[How it works](#how-it-works)
-[Installation](#install-md5sum)
-[How to run](#how-to-run)
+#### Contents:
++ [Why?](#why-)
++ [How it works](#how-it-works)
++ [Installation](#install-md5sum)
++ [How to run](#how-to-run)
 
 ### Why?
  First, understand the need of this automation
