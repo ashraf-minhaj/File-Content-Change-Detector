@@ -4,6 +4,7 @@
 # mail  : asrhaf_minhaj@yahoo.com
 
 set -e                     # exit when any command fails
+set -o pipefail
 
 file="../src/app.py"       # change the file name according to your need
 hash_file="../src/hash.md5"
@@ -24,8 +25,7 @@ else
 
     # compare old hash with the current file hash
     # if does not match, update content.md5 hash
-    # if [ $old_hash = $new_hash ]
-    if [ $(cat $hash_file | awk '{ print $1 }') = $(sudo md5sum $file | awk '{ print $1 }') ]
+    if [ $old_hash = $new_hash ]
     then
         echo "No change detected"
     else
