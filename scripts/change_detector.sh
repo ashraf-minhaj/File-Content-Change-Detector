@@ -24,7 +24,8 @@ else
 
     # compare old hash with the current file hash
     # if does not match, update content.md5 hash
-    if [ $old_hash = $new_hash ]
+    # if [ $old_hash = $new_hash ]
+    if [ $(cat $hash_file | awk '{ print $1 }') = $(sudo md5sum $file | awk '{ print $1 }') ]
     then
         echo "No change detected"
     else
